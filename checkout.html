@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订单结算 - 智慧居家养老</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">智慧居家养老</a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="entrance.html">玄关区域</a></li>
+                <li><a href="livingroom.html">客厅区域</a></li>
+                <li><a href="bedroom.html">卧室区域</a></li>
+                <li><a href="bathroom.html">卫生间区域</a></li>
+                <li><a href="kitchen.html">厨房区域</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cart.html" class="btn-cart">购物车</a>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="side-menu-overlay" id="sideMenuOverlay"></div>
+    
+    <div class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <h3>菜单</h3>
+            <button class="side-menu-close" id="sideMenuClose">×</button>
+        </div>
+        <div class="side-menu-content">
+            <a href="profile.html" class="side-menu-item">
+                <span class="side-menu-icon"></span>
+                个人资料
+            </a>
+            <a href="login.html" class="side-menu-item">
+                <span class="side-menu-icon"></span>
+                登录 / 注册
+            </a>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <h1 class="section-title">订单结算</h1>
+        
+        <div class="checkout-container" id="checkout-container">
+            <div class="empty-checkout">
+                <div class="empty-checkout-icon"></div>
+                <h2 class="empty-cart-title">购物车是空的</h2>
+                <p class="empty-cart-desc">请先选择商品后再进行结算</p>
+                <a href="index.html" class="continue-shopping">继续购物</a>
+            </div>
+        </div>
+
+        <div id="payment-section" class="payment-section-hidden">
+            <div class="checkout-container">
+                <div class="checkout-section">
+                    <h2 class="section-title">收货信息</h2>
+                    
+                    <div class="form-group">
+                        <label for="contact-phone">联系电话</label>
+                        <input type="tel" id="contact-phone" class="checkout-input" placeholder="请输入联系电话" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="delivery-address">收货地址</label>
+                        <textarea id="delivery-address" class="checkout-input checkout-textarea" placeholder="请输入详细收货地址" required></textarea>
+                    </div>
+                    
+                    <h2 class="section-title">选择支付方式</h2>
+                    
+                    <div class="payment-methods">
+                        <label class="payment-method selected">
+                            <input type="radio" name="payment" value="wechat" checked>
+                            <img src="图片/微信图标.jpg" alt="微信支付" class="payment-icon">
+                            <div class="payment-info">
+                                <h4>微信支付</h4>
+                                <p>使用微信扫描二维码支付</p>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="alipay">
+                            <img src="图片/支付宝.png" alt="支付宝" class="payment-icon">
+                            <div class="payment-info">
+                                <h4>支付宝</h4>
+                                <p>使用支付宝扫描二维码支付</p>
+                            </div>
+                        </label>
+                        
+                        <label class="payment-method">
+                            <input type="radio" name="payment" value="bankcard">
+                            <img src="图片/银行卡.png" alt="银行卡" class="payment-icon">
+                            <div class="payment-info">
+                                <h4>银行卡支付</h4>
+                                <p>使用银行卡扫描二维码支付</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="qr-code-section">
+                        <h3 class="qr-section-title">请扫描下方二维码完成支付</h3>
+                        <img src="图片/二维码.png" alt="支付二维码" id="qr-code" class="qr-code">
+                        <p class="qr-hint">支付完成后，点击"确认支付"按钮</p>
+                    </div>
+
+                    <button class="btn-pay" id="confirm-pay-btn">确认支付 ¥<span id="pay-amount">0.00</span></button>
+                    <a href="cart.html" class="btn-back">← 返回购物车</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 智慧居家养老 - 让爱与安全同在</p>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

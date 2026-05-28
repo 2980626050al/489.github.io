@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册 - 智慧居家养老</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">智慧居家养老</a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="entrance.html">玄关区域</a></li>
+                <li><a href="livingroom.html">客厅区域</a></li>
+                <li><a href="bedroom.html">卧室区域</a></li>
+                <li><a href="bathroom.html">卫生间区域</a></li>
+                <li><a href="kitchen.html">厨房区域</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="cart.html" class="btn-cart">🛒 购物车</a>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="side-menu-overlay" id="sideMenuOverlay"></div>
+    
+    <div class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <h3>菜单</h3>
+            <button class="side-menu-close" id="sideMenuClose">×</button>
+        </div>
+        <div class="side-menu-content">
+            <a href="profile.html" class="side-menu-item">
+                <span class="side-menu-icon">👤</span>
+                个人资料
+            </a>
+            <a href="login.html" class="side-menu-item">
+                <span class="side-menu-icon">🔐</span>
+                登录 / 注册
+            </a>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="auth-container">
+            <h1>注册新账号</h1>
+            <form>
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" id="name" placeholder="请输入您的姓名" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">手机号码</label>
+                    <input type="tel" id="phone" placeholder="请输入手机号码" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" placeholder="请设置密码" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">确认密码</label>
+                    <input type="password" id="confirm-password" placeholder="请再次输入密码" required>
+                </div>
+                <button type="submit" class="btn-primary auth-btn">注册</button>
+            </form>
+            <div class="auth-link">
+                已有账号？<a href="login.html">立即登录</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 智慧居家养老 - 让爱与安全同在</p>
+        </div>
+    </footer>
+
+    <script src="js/menu.js"></script>
+</body>
+</html>
