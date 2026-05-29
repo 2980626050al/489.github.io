@@ -69,7 +69,7 @@ function setupAvatarUpload() {
         const file = e.target.files[0];
         if (file) {
             if (file.size > 500000) {
-                alert('⚠️ 图片大小不能超过500KB，请选择更小的图片！');
+                alert('图片大小不能超过500KB，请选择更小的图片！');
                 return;
             }
             
@@ -78,7 +78,7 @@ function setupAvatarUpload() {
                 avatarImg.src = event.target.result;
                 avatarEmoji.style.display = 'none';
                 
-                alert('✅ 头像已更新！');
+                alert('头像已更新！');
             };
             reader.readAsDataURL(file);
         }
@@ -128,5 +128,5 @@ function saveProfile() {
     document.querySelector('.profile-name').textContent = profile.name;
     document.querySelector('.profile-phone').textContent = profile.phone.replace(/(\d{3})\d{4}(\d{4})/, '$1****$2');
 
-    alert('✅ 资料已保存成功！');
+    alert('资料已保存成功！');
 }

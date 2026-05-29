@@ -22,7 +22,7 @@ function renderCheckout() {
     if (cart.length === 0) {
         container.innerHTML = `
             <div class="empty-checkout">
-                <div class="empty-checkout-icon">📦</div>
+                <div class="empty-checkout-icon"></div>
                 <h2 class="empty-cart-title">购物车是空的</h2>
                 <p class="empty-cart-desc">请先选择商品后再进行结算</p>
                 <a href="index.html" class="continue-shopping">继续购物</a>
@@ -102,19 +102,19 @@ function confirmPayment() {
     const deliveryAddress = document.getElementById('delivery-address').value.trim();
     
     if (!contactPhone) {
-        alert('⚠️ 请输入联系电话！');
+        alert('请输入联系电话！');
         document.getElementById('contact-phone').focus();
         return;
     }
     
     if (!/^1[3-9]\d{9}$/.test(contactPhone)) {
-        alert('⚠️ 请输入正确的手机号码！');
+        alert('请输入正确的手机号码！');
         document.getElementById('contact-phone').focus();
         return;
     }
     
     if (!deliveryAddress) {
-        alert('⚠️ 请输入收货地址！');
+        alert('请输入收货地址！');
         document.getElementById('delivery-address').focus();
         return;
     }
@@ -126,7 +126,7 @@ function confirmPayment() {
         'bankcard': '银行卡支付'
     };
     
-    alert(`✅ 支付成功！\n\n📞 联系电话：${contactPhone}\n📍 收货地址：${deliveryAddress}\n💳 支付方式：${paymentNames[selectedPayment]}\n\n感谢您的购买，我们将尽快为您发货！`);
+    alert(`支付成功！\n\n联系电话：${contactPhone}\n收货地址：${deliveryAddress}\n支付方式：${paymentNames[selectedPayment]}\n\n感谢您的购买，我们将尽快为您发货！`);
     
     localStorage.removeItem('smartHomeCart');
     window.location.href = 'index.html';
